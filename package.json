@@ -1,9 +1,9 @@
 {
-  "name": "yy-blog",
+  "name": "yiyang-site",
   "private": true,
-  "version": "0.0.0",
+  "version": "2.0.",
   "type": "module",
-  "homepage": "./",
+  "homepage": "https://waiterxiaoyy.github.io",
   "scripts": {
     "predev": "node generateBlogMetadata.js",
     "prebuild": "node generateBlogMetadata.js",
@@ -13,6 +13,8 @@
     "preview": "vite preview",
     "deploy": "gh-pages -d dist -v github-pages -r https://github.com/waiterxiaoyy/waiterxiaoyy.github.io.git"
   },
+  "license": "MIT",
+
   "dependencies": {
     "@ant-design/icons": "^5.4.0",
     "@bytemd/plugin-breaks": "^1.12.3",
