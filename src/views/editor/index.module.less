@@ -1,0 +1,265 @@
+
+.contanier {
+    padding: 10px 20px 0 20px;
+    background-color: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    .editor {
+        // min-width: 1900px;
+        // max-width: 1900px;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+
+        .toolbar {
+
+            height: 50px;
+            background-color: var(--content-bg-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            border-radius: 8px;
+            color: var(--text-color);
+            .title {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                // width: 720px;
+                gap: 10px;
+                justify-content: flex-start;
+
+                .titleInfo {
+                    font-size: 16px;
+                    color: var(--text-color);
+                }
+                .titleInput {
+                    width: 480px;
+                }
+                .inputItem {
+                    border: none;
+                    width: 480px;
+                }
+               
+            }
+            .toolItems {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                .updateTitle { 
+                    margin-right: 5px;
+                    font-size: 14px
+                }
+                .saveStatus {
+                    font-size: 14px;
+                    margin-right: 5px;
+                    vertical-align: middle;
+                    // color: var(--text-color);
+                }
+                .btns {
+                    display: flex;
+                    flex-direction: row;
+                }
+            }
+
+        }
+        .editorContainer {
+        }
+        :global(.bytemd) {
+            height: calc(100vh - 190px);
+            :global(.markdown-body) {
+                img {
+                    max-width: 100%;
+                }
+
+            }
+        }
+        :global(.bytemd-toolbar) {
+            color: var(--text-color);
+            background-color: var(--content-bg-color);
+        }
+        :global(.bytemd-body) {
+            background-color: var(--content-bg-color);
+            h1 {
+                margin: 35px 0;
+            }
+            p {
+                color: var(--text-color);
+            }
+            ul {
+                li {
+                    color: var(--text-color);
+                }
+            }
+            ol {
+                li {
+                    color: var(--text-color)
+                }
+            }
+            p {
+                color: var(--text-color);
+            }
+            h4 {
+                color: var(--text-color);
+            }
+            h5 {
+                color: var(--text-color);
+            }
+    
+            a {
+                color: var(--text-color);
+                word-break: break-all;
+            }
+    
+            blockquote {
+                color: var(--text-color);
+            }
+            table {
+                color: var(--text-color);
+                width: 100%;
+            }
+        }
+        :global(.bytemd .CodeMirror-sizer) {
+            background-color: var(--content-bg-color);
+            pre {
+                color: var(--text-color);
+                font-size: 15px;
+            }
+        }
+        :global(.cm-s-default .cm-header) {
+            color: var(--editor-header-text-color);
+        }
+        :global(.cm-s-default .cm-link) {
+            color: var(--editor-header-text-color);
+        }
+        :global(.bytemd-toolbar-right) {
+            :global(.bytemd-toolbar-icon:nth-of-type(5)) {
+                display: none;
+            }
+        }
+        // :global(.bytemd-status) {
+        //     background-color: var(--content-bg-color);
+        //     color: var(--text-color);
+        // }
+    }
+}
+
+
+@media (max-width: 1010px) {
+    .contanier {
+        .editor {
+            .toolbar {
+    
+                .title {
+
+                    .titleInfo {
+                        font-size: 16px;
+                        color: var(--text-color);
+                    }
+                    .titleInput {
+                        width: 300px;
+                    }
+                    .inputItem {
+                        width: 300px;
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    .contanier {
+        .editor {
+            .toolbar {
+    
+                .title {
+
+                    .titleInfo {
+                        font-size: 16px;
+                        color: var(--text-color);
+                    }
+                    .titleInput {
+                        width: 270px;
+                    }
+                    .inputItem {
+                        border: none;
+                        width: 270px;
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 840px) {
+    .contanier {
+        .editor {
+            .toolbar {
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: space-between;
+                height: 90px;
+                gap: 10px;
+                padding: 10px 20px;
+
+                
+            }
+            :global(.bytemd) {
+                height: calc(100vh - 210px);
+            }
+            :global(.bytemd-toolbar-right) {
+                :global(.bytemd-toolbar-icon:nth-of-type(3)) {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 470px) {
+    .contanier {
+        .editor {
+            .toolbar {
+                gap: 5px;
+                .title {
+                    // font-size: 12px;
+                    width:320px;
+                    .titleInfo {
+                      width: 50px;
+                    }
+                    .titleInput {
+                        width: 260px;
+                    }
+                    .inputItem {
+                        width: 260px;
+                    }
+                    .titleInfo {
+                        display: block; 
+                        font-size: 14px;
+                    }
+                }
+                .toolItems {
+                    gap: 2px;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    .updateTitle { 
+                        font-size: 12px
+                    }
+                    .saveStatus {
+                        font-size: 10px;
+                    }
+                    
+                }
+            }
+            :global(.bytemd) {
+                height: calc(100vh - 210px);
+            }
+        }
+    }
+}

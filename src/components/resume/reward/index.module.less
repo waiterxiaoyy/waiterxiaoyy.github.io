@@ -1,0 +1,99 @@
+@font-size-header: 1.2em;
+@background-color: #f4f4f4;
+@box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+@border-radius: 10px;
+.linkTo {
+    position: relative;
+    top: -5em;
+  }
+.title{
+    position: relative;
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #e8f8e5;
+    clip-path: polygon(0 0, 90% 0, 100% 100%, 0 100%);
+}
+
+.title::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: -10px;
+    right: -10px;
+    bottom: 10px;
+    background-color: #32caac;
+    z-index: -1;
+    clip-path: polygon(0 0, 90% 0, 100% 100%, 0 100%);
+}
+
+.sectionContent {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    
+  }
+.honorList {
+    font-size: 18px;
+    padding: 0 40px;
+    :global(li) {
+        margin-bottom: 10px; /* 设置每个列表项之间的间距 */
+    }
+}
+
+.honorCard {
+    display: flex;
+    flex-direction: column;
+    // padding: 20px;
+    background-color: #fff;
+    box-shadow: @box-shadow;
+    border-radius: @border-radius;
+    transition: transform 0.5s;
+    max-width: 300px;
+    // overflow: hidden;
+    cursor: pointer;
+    transition: all 0.5s;
+
+    &:hover {
+        transform: scale(1.02);
+    }
+
+    .cardTitle {
+        border-bottom: 1px solid #f4f4f4;
+        height: 50px;
+        padding: 10px 20px;
+        font-size: 18px;
+        font-weight: 700;
+        text-align: center;
+
+    }
+
+    .cardContent {
+        padding: 10px 20px;
+        font-size: 17px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        .honorItem {
+            line-height: 20px;
+        }
+    }
+
+}
+
+@media (max-width: 820px) {
+    .title {
+        font-size: 18px;
+    }
+
+    .sectionContent {
+        .honorList {
+            font-size: 16px;
+        }
+    }
+}
