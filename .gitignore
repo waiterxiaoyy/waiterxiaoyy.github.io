@@ -14,7 +14,7 @@ dist-ssr
 
 nginx/
 
-deplpy_nginx.sh
+./deploy_nginx.sh
 
 public/blog/
 
