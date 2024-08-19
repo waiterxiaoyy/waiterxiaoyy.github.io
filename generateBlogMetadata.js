@@ -12,12 +12,16 @@ console.log(
 );
 
 // 获取当前模块的路径
-// mac
-const __dirname = path.dirname(
-	new URL(import.meta.url).pathname
-);
+// // mac
+// const __dirname = path.dirname(
+// 	new URL(import.meta.url).pathname
+// );
 // windows
-// const __dirname = path.dirname(new URL(import.meta.url).pathname).slice(1);
+const __dirname = path
+	.dirname(
+		new URL(import.meta.url).pathname
+	)
+	.slice(1);
 
 // 博客目录
 const blogDirectory = path.join(
