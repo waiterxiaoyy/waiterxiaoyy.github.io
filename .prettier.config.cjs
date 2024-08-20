@@ -1,6 +1,6 @@
 module.exports = {
 	// 每行最大列，超过换行
-	printWidth: 180,
+	printWidth: 120,
 	// 使用制表符而不是空格缩进
 	useTabs: false,
 	// 缩进

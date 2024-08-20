@@ -10,6 +10,7 @@ import Work from '@/components/resume/work';
 import { useConfig } from '@/context/ConfigContext';
 import { HashLink as Link } from 'react-router-hash-link';
 import { message } from 'antd';
+import ContributionChart from '@/components/resume/cakebdar';
 
 type Section = {
   component: () => JSX.Element;
@@ -17,6 +18,10 @@ type Section = {
 };
 
 const sections: { [key: string]: Section } = {
+  ContributionChart: {
+    component: () => <ContributionChart />,
+    description: '贡献图'
+  },
   Education: {
     component: () => <Education />,
     description: '教育经历'
