@@ -10,7 +10,7 @@ import Work from '@/components/resume/work';
 import { useConfig } from '@/context/ConfigContext';
 import { HashLink as Link } from 'react-router-hash-link';
 import { message } from 'antd';
-import ContributionChart from '@/components/resume/cakebdar';
+import ContributionChart from '@/components/resume/calendar';
 
 type Section = {
   component: () => JSX.Element;
@@ -57,7 +57,6 @@ export default function Resume() {
     }
   };
   const handleClickConcat = (type: string) => {
-    console.log('config', config);
     if (type === 'github') {
       window.open(config.resume.contact.github);
     }
@@ -114,7 +113,7 @@ export default function Resume() {
           <div className={styles.title}>个人简历</div>
           <div className={styles.linkContainer}>
             {Object.keys(sections).map(sec => (
-              <div id={sec} className={styles.linkItem}>
+              <div id={sec} key={sec} className={styles.linkItem}>
                 <Link to={`#${sec.toLowerCase()}`}>{sections[sec]?.description}</Link>
               </div>
             ))}
