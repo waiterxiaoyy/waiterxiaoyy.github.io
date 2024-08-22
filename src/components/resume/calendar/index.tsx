@@ -52,10 +52,10 @@ const WeekMap: Record<number, string> = {
 // 贡献程度颜色映射表
 const levelColorMap: Record<number, string> = {
   0: '#f5f6f7',
-  1: '#cdf4d3',
-  2: '#9fe1b1',
-  3: '#97d0a6',
-  4: '#90b69c'
+  1: '#c6e48b',
+  2: '#7bc96f',
+  3: '#239a3b',
+  4: '#196127'
 };
 
 // 请求真实github贡献的接口，具体参考https://github.com/rschristian/github-contribution-calendar-api
